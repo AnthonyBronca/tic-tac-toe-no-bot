@@ -127,7 +127,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
         // check right diagonal
-
         if (board[0][0] === currentTurn && board[1][1] === currentTurn && board[2][2] === currentTurn) {
             return true;
         }
@@ -140,7 +139,6 @@ window.addEventListener("DOMContentLoaded", () => {
             hasTie = true;
             return false;
         }
-
 
         // check if there are any ties
         return false;
@@ -181,9 +179,6 @@ window.addEventListener("DOMContentLoaded", () => {
         ];
 
         gameStatus.innerText = "X to Move";
-
-
-
     })
 
     giveUpBtn.addEventListener("click", () => {
@@ -252,7 +247,6 @@ window.addEventListener("DOMContentLoaded", () => {
             gameStatus.innerText = "O to Move";
         }
 
-
     })
 
 
@@ -291,6 +285,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 const newText = oldTextArr.join(": ");
                                 xWins.innerText = newText;
                         }
+
                         const gameStatus = document.getElementById("game-status");
                         if (currentTurn === 2) {
                             gameStatus.innerText = "O is the winner!";
